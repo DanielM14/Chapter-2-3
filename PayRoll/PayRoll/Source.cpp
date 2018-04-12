@@ -15,7 +15,7 @@ int main()
 	std::cout << "What is the employee's weekly gross pay >>>" << std::endl;
 	std::cin >> weeklyGrossPay;
 	
-	total = weeklyGrossPay*fWt*stateTax + weeklyGrossPay*fICA*stateTax;
+	total = weeklyGrossPay*fWt + weeklyGrossPay*fICA + weeklyGrossPay *stateTax;
 
 	std::cout << "Your weekly gross pay is now " << total << std::endl;
 
