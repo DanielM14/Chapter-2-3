@@ -6,24 +6,25 @@
 
 int main()
 {
-	double eggsUserWants;
+	int eggsUserWants;
 	double eggsRemaining;
 	double singleEgg;
 	double pricePerDozen = 2.00;
 	double pricePerEgg = 0.85;
 	int dozenEggs;
-	
+	double finalPrice;
 
 	std::cout << "How many eggs do you want >>>" << std::endl;
 	std::cin >> eggsUserWants;
 	
 	dozenEggs = eggsUserWants  / 12;
-	eggsRemaining = dozenEggs  % 12;
-	dozenEggs * pricePerDozen;
-	singleEgg * pricePerEgg;
+	eggsRemaining = eggsUserWants % 12;
+	singleEgg = eggsRemaining*pricePerEgg;
 
-	std::cout << "Okay you will have " << dozenEggs << " eggs and " << eggsRemaining << " remaining." << std::endl;
-	std::cout << "Your price is " << dozenEggs * pricePerDozen << std::endl;
+	std::cout << "Okay you will have " << dozenEggs << " dozen eggs and " << eggsRemaining << " remaining." << std::endl;
+	finalPrice = (pricePerDozen * dozenEggs) + (pricePerEgg * eggsRemaining);
+	std::cout << "Okay your total price is going to be " << finalPrice << std::endl;
+
 	system("pause");
 	return 0;
 }
